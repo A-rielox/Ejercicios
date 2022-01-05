@@ -241,3 +241,67 @@ const hacerRomano = num => {
 };
 
 console.log(hacerRomano(19));
+
+//💫💫💫💫
+//💫💫💫💫
+// You might know some pretty large perfect squares. But what about the NEXT one?
+
+// Complete the findNextSquare method that finds the next integral perfect square after the one passed as a parameter. Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
+
+// If the parameter is itself not a perfect square then -1 should be returned. You may assume the parameter is non-negative.
+
+// Examples:(Input --> Output)
+
+// 121 --> 144
+// 625 --> 676
+// 114 --> -1 since 114 is not a perfect square
+
+function findNextSquare(sq) {
+   // Return the next square if sq is a perfect square, -1 otherwise
+   const rest = Math.sqrt(sq) % 1;
+   let next = sq + 1;
+
+   if (rest !== 0) {
+      return -1;
+   } else {
+      while (Math.sqrt(next) % 1 !== 0) {
+         next += 1;
+      }
+      return next;
+   }
+}
+
+//💫💫💫💫
+//💫💫💫💫
+// This time no story, no theory. The examples below show you how to write function accum:
+
+// Examples:
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+// The parameter of accum is a string which includes only letters from a..z and A..Z.
+
+//ZpglnRxqenU
+const anStr = 'Zpgln';
+
+function accum(s) {
+   let curr = '';
+   let newStr = '';
+   let lower = '';
+
+   for (let i = 0; i < s.length; i++) {
+      curr = s[i];
+
+      newStr += curr.toUpperCase();
+      if (i > 0) {
+         lower = s[i].padStart(i, curr).toLowerCase();
+      }
+
+      newStr += lower + '-';
+   }
+
+   return (newStr = newStr.slice(0, -1));
+}
+
+//💫💫💫💫
+//💫💫💫💫
