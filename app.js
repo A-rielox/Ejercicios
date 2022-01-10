@@ -1,36 +1,28 @@
-//56
-// The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
+// 64
+// Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
 
 // Examples
-// "din"      =>  "((("
-// "recede"   =>  "()()()"
-// "Success"  =>  ")())())"
-// "(( @"     =>  "))(("
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
 
-// assert.strictEqual(duplicateEncode("din"),"(((");
-// assert.strictEqual(duplicateEncode("recede"),"()()()");
-// assert.strictEqual(duplicateEncode("Success"),")())())","should ignore case");
-// assert.strictEqual(duplicateEncode("(( @"),"))((");
-// function duplicateEncode(word){
-//    // ...
-// }
-const func = word => {
-   let newWord = '';
+// function reverseWords(str) {
+//    // Go for it
+//  }
 
-   for (let i = 0; i < word.length; i++) {
-      let wordArr = Array.from(word.toLowerCase());
-      let singleLett = wordArr.splice(i, 1);
-      let noDup = [...new Set(wordArr)];
-      console.log(singleLett, wordArr, noDup);
+const reverseWords = str => {
+   let reversed = [];
+   const arrays = str.split(' ');
 
-      if (noDup.includes(singleLett[0])) {
-         newWord += ')';
-      } else {
-         newWord += '(';
-      }
+   for (const word of arrays) {
+      let arr = word.split('');
+      arr.push(' ');
+      reversed.push(arr.reverse().join(''));
    }
-   return newWord;
+
+   reversed = reversed.join('');
+   return reversed.slice(1);
 };
 
-console.log(func('Success')); //")())())"
-//64
+console.log(reverseWords('hoLi hola  guaton'));
+
+//66
