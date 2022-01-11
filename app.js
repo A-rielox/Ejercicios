@@ -1,32 +1,23 @@
-// 74
+// 82
+// Trolls are attacking your comment section!
 
-// Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+// A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
 
-// It should remove all values from list a, which are present in list b keeping their order.
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
 
-// arrayDiff([1,2],[1]) == [2]
-// If a value is present in b, all of its occurrences must be removed from the other:
+// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
 
-// arrayDiff([1,2,2,2,3],[2]) == [1,3]
+// "This website is for losers LOL!"), "Ths wbst s fr lsrs LL!")
+// "No offense but,\nYour writing is among the worst I've ever read"), "N ffns bt,\nYr wrtng s mng th wrst 'v vr rd")
+// "What are you, a communist?"), "Wht r y,  cmmnst?")
 
-const arrayDiff = (a, b) => {
-   return a.filter(item => !b.includes(item));
-};
-
-console.log(arrayDiff([1, 2], [1]));
-console.log(arrayDiff([1, 2, 2, 2, 3], [2]));
-console.log(arrayDiff([], [4, 5]));
-console.log(arrayDiff([1, 8, 2], []));
-console.log(arrayDiff([1, 2, 3], [1, 2]));
-//
-//
-//
-//
-//
-//
-//
-//82
-
-// function array_diff(a, b) {
-//    return a.filter(e => !b.includes(e));
-// }
+function disemvowel(str) {
+   const vowels = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'];
+   //prettier-ignore
+   return str.split('').filter(lett=> !vowels.includes(lett)).join('');
+}
+//mas bakan
+// function disemvowel(str) {
+//    return str.replace(/[aeiou]/gi, '');
+//  }
+// 114 - 6 KYU
