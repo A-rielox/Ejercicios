@@ -1,20 +1,29 @@
-// 114
-// In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+// 118
+// You need to write regex that will validate a password to make sure it meets the following criteria:
 
-// Example
-// filter_list([1,2,'a','b']) == [1,2]
-// filter_list([1,'a','b',0,15]) == [1,0,15]
-// filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
-// list([1,2,'a','b']),[1,2])
-// list([1,'a','b',0,15]),[1,0,15])
-// list([1,2,'aasf','1','123',123]),[1,2,123])
+// At least six characters long
+// contains a lowercase letter
+// contains an uppercase letter
+// contains a number
+// Valid passwords will only be alphanumeric characters.
 
-function filter_list(l) {
-   // let newList = l.filter(item => typeof item === 'number');
+// ('djI38D55'), 'djI38D55 - true'
+// ('a2.d412'), 'a2.d412 - false'
+// ('JHD5FJ53'), 'JHD5FJ53 - false'
+// ('!fdjn345'), '!fdjn345 - false'
+// ('jfkdfj3j'), 'jfkdfj3j - false'
+// ('123'), '123 - false'
+// ('abc'), 'abc - false'
+// ('Password123'), 'Password123 - true'
+// function validate(password) {
+//    return /(put answer here)/.test(password);
+// }
 
-   return l.filter(item => typeof item === 'number');
+function validate(password) {
+   return /[a-zA-Z0-9]/.test(password);
 }
 
-console.log(filter_list([1, 2, 'a', 'b']));
-console.log(filter_list([1, 'a', 'b', 0, 15]));
-console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));
+console.log(validate('djI38D55'));
+
+// \w -> alfanumericos
+// \w{6} -> alfanumericos de 6 o mas
