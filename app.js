@@ -1,23 +1,20 @@
-// 82
-// Trolls are attacking your comment section!
+// 114
+// In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
 
-// A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+// Example
+// filter_list([1,2,'a','b']) == [1,2]
+// filter_list([1,'a','b',0,15]) == [1,0,15]
+// filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+// list([1,2,'a','b']),[1,2])
+// list([1,'a','b',0,15]),[1,0,15])
+// list([1,2,'aasf','1','123',123]),[1,2,123])
 
-// Your task is to write a function that takes a string and return a new string with all vowels removed.
+function filter_list(l) {
+   // let newList = l.filter(item => typeof item === 'number');
 
-// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
-
-// "This website is for losers LOL!"), "Ths wbst s fr lsrs LL!")
-// "No offense but,\nYour writing is among the worst I've ever read"), "N ffns bt,\nYr wrtng s mng th wrst 'v vr rd")
-// "What are you, a communist?"), "Wht r y,  cmmnst?")
-
-function disemvowel(str) {
-   const vowels = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'];
-   //prettier-ignore
-   return str.split('').filter(lett=> !vowels.includes(lett)).join('');
+   return l.filter(item => typeof item === 'number');
 }
-//mas bakan
-// function disemvowel(str) {
-//    return str.replace(/[aeiou]/gi, '');
-//  }
-// 114 - 6 KYU
+
+console.log(filter_list([1, 2, 'a', 'b']));
+console.log(filter_list([1, 'a', 'b', 0, 15]));
+console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));
