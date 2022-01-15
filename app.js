@@ -8,16 +8,23 @@
 // wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 
 function wave(str) {
-   // Code here
+   let newStr = [...str];
+   let mW = [];
+
+   for (const [k, v] of Object.entries(newStr)) {
+      if (v !== ' ') {
+         let tempArr = [...str];
+         let neArr;
+         newArr = tempArr.splice(k, 1, v.toUpperCase());
+         mW.push(tempArr.join(''));
+      }
+   }
+
+   return mW;
 }
 
-/*  
+console.log(wave(' gap '));
 
-
-
-
-
-*/
 // wave("codewars")
 // result = ["Codewars", "cOdewars", "coDewars", "codEwars", "codeWars", "codewArs", "codewaRs", "codewarS"];
 //
@@ -29,3 +36,4 @@ function wave(str) {
 //
 // wave(" gap ")
 // result = [" Gap ", " gAp ", " gaP "];
+//126
