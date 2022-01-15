@@ -36,4 +36,4 @@ console.log(wave(' gap '));
 //
 // wave(" gap ")
 // result = [" Gap ", " gAp ", " gaP "];
-//126
+//127
