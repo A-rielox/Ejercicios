@@ -1,37 +1,31 @@
-// 118
-// 5 kyu - Regex Password Validation
-// You need to write regex that will validate a password to make sure it meets the following criteria:
+//118
+// In this simple Kata your task is to create a function that turns a string into a Mexican Wave. You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up.
+// Rules
+//  1.  The input string will always be lower case but maybe empty.
 
-// At least six characters long
-// contains a lowercase letter
-// contains an uppercase letter
-// contains a number
-// Valid passwords will only be alphanumeric characters.
+//  2.  If the character in the string is whitespace then pass over it as if it was an empty seat
+// Example
+// wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 
-// ('djI38D55'), 'djI38D55 - true'
-// ('a2.d412'), 'a2.d412 - false'
-// ('JHD5FJ53'), 'JHD5FJ53 - false'
-// ('!fdjn345'), '!fdjn345 - false'
-// ('jfkdfj3j'), 'jfkdfj3j - false'
-// ('123'), '123 - false'
-// ('abc'), 'abc - false'
-// ('Password123'), 'Password123 - true'
-// function validate(password) {
-//    return /(put answer here)/.test(password);
-// }
-
-function validate(password) {
-   return /(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])\w{6,}/.test(password);
+function wave(str) {
+   // Code here
 }
 
-console.log(validate('djI38D55'));
-console.log(validate('a2.d412'));
-console.log(validate('JHD5FJ53'));
-console.log(validate('!fdjn345'));
-console.log(validate('Password123'));
-console.log(validate('djI38D55'));
-console.log(validate('djI38D55'));
+/*  
 
-// \w -> alfanumericos
-// \w{6} -> alfanumericos de 6 o mas
-// [a-zA-Z0-9] -> letras minusculas, mayusculas y nums
+
+
+
+
+*/
+// wave("codewars")
+// result = ["Codewars", "cOdewars", "coDewars", "codEwars", "codeWars", "codewArs", "codewaRs", "codewarS"];
+//
+// result = [];
+// wave("")
+//
+// wave("two words")
+// result = ["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"];
+//
+// wave(" gap ")
+// result = [" Gap ", " gAp ", " gaP "];
