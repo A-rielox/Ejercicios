@@ -1,39 +1,37 @@
-//118
-// In this simple Kata your task is to create a function that turns a string into a Mexican Wave. You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up.
-// Rules
-//  1.  The input string will always be lower case but maybe empty.
+//136
+// Modify the kebabize function so that it converts a camel case string into a kebab case.
 
-//  2.  If the character in the string is whitespace then pass over it as if it was an empty seat
-// Example
-// wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+function kebabize(str) {
+   let newStr = [];
 
-function wave(str) {
-   let newStr = [...str];
-   let mW = [];
+   newStr = [...str]
+      .map(item => {
+         const reg = /[0-9]/;
+         if (reg.test(item)) {
+            return '';
+         } else if (item === item.toLowerCase()) {
+            return item;
+         } else if (item === item.toUpperCase()) {
+            return '-' + item.toLowerCase();
+         }
+      })
+      .filter(item => item !== '');
 
-   for (const [k, v] of Object.entries(newStr)) {
-      if (v !== ' ') {
-         let tempArr = [...str];
-         let neArr;
-         newArr = tempArr.splice(k, 1, v.toUpperCase());
-         mW.push(tempArr.join(''));
-      }
+   console.log(newStr);
+
+   const reg = /-/;
+   if (reg.test(newStr[0])) {
+      console.log(newStr[0][1]);
+      newStr.splice(0, 1, newStr[0][1]);
    }
 
-   return mW;
+   return newStr.join('');
 }
 
-console.log(wave(' gap '));
+console.log(kebabize('CamelsHaveThreeHumps')); // camels-have-three-humps
+// console.log(kebabize('camelsHave3Humps')); // camels-have-humps
+// Notes:
 
-// wave("codewars")
-// result = ["Codewars", "cOdewars", "coDewars", "codEwars", "codeWars", "codewArs", "codewaRs", "codewarS"];
-//
-// result = [];
-// wave("")
-//
-// wave("two words")
-// result = ["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"];
-//
-// wave(" gap ")
-// result = [" Gap ", " gAp ", " gaP "];
-//127
+// the returned string should only contain lowercase letters
+
+//145
