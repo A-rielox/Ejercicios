@@ -1,22 +1,21 @@
-// prettier-ignore
-const roma = { M:1000, CM:900, D:500, CD:400, C:100, XC:90, L:50, XL:40, X:10, IX:9, V:5, IV:4, I:1 };
-function hacerRomano(num) {
-   let romNum = '';
-   let rest = num;
+// const roma = { M:1000, CM:900, D:500, CD:400, C:100, XC:90, L:50, XL:40, X:10, IX:9, V:5, IV:4, I:1 };
+// function hacerRomano(num) {
+//    let romNum = '';
+//    let rest = num;
 
-   for (const key in roma) {
-      while (rest >= roma[key]) {
-         rest = rest - roma[key];
+//    for (const key in roma) {
+//       while (rest >= roma[key]) {
+//          rest = rest - roma[key];
 
-         romNum += key;
-      }
-   }
-   return romNum;
-}
+//          romNum += key;
+//       }
+//    }
+//    return romNum;
+// }
 
-console.log(hacerRomano(19));
-console.log(hacerRomano(21));
-console.log(hacerRomano(2000));
+// console.log(hacerRomano(19));
+// console.log(hacerRomano(21));
+// console.log(hacerRomano(2000));
 /////////////////////////////////
 
 // 6 kyu   Does my number look big in this?
@@ -197,20 +196,20 @@ console.log(hacerRomano(2000));
 
 // [160, 3, 1719, 19, 11, 13, -21]
 // Should return: 160 (the only even number)
-/* 
-function findOutlier(integers) {
-   let odd = integers.filter(i => i % 2 !== 0);
-   let even = integers.filter(i => i % 2 === 0);
 
-   return odd.length === 1 ? odd[0] : even[0];
-}
+// function findOutlier(integers) {
+//    let odd = integers.filter(i => i % 2 !== 0);
+//    let even = integers.filter(i => i % 2 === 0);
 
-console.log(findOutlier([0, 1, 2])); //, 1)
-console.log(findOutlier([1, 2, 3])); //, 2)
-console.log(findOutlier([2, 6, 8, 10, 3])); //, 3)
-console.log(findOutlier([0, 0, 3, 0, 0])); //, 3)
-console.log(findOutlier([1, 1, 0, 1, 1])); //, 0)
- */
+//    return odd.length === 1 ? odd[0] : even[0];
+// }
+
+// console.log(findOutlier([0, 1, 2])); //, 1)
+// console.log(findOutlier([1, 2, 3])); //, 2)
+// console.log(findOutlier([2, 6, 8, 10, 3])); //, 3)
+// console.log(findOutlier([0, 0, 3, 0, 0])); //, 3)
+// console.log(findOutlier([1, 1, 0, 1, 1])); //, 0)
+
 //////////////////////////////////////////
 
 // 6 kyu    Array.diff
@@ -222,26 +221,24 @@ console.log(findOutlier([1, 1, 0, 1, 1])); //, 0)
 // If a value is present in b, all of its occurrences must be removed from the other:
 
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
-/* 
-function arrayDiff(a, b) {
-   let filtered = [...a];
 
-   for (const item of b) {
-      console.log(item);
+// function arrayDiff(a, b) {
+//    let filtered = [...a];
 
-      filtered = filtered.filter(n => n !== item);
-   }
+//    for (const item of b) {
+//       filtered = filtered.filter(n => n !== item);
+//    }
 
-   return filtered;
-}
+//    return filtered;
+// }
 
-console.log(arrayDiff([1, 2], [1]));
-console.log(arrayDiff([1, 2, 2], [1]));
-console.log(arrayDiff([1, 2, 2], [2]));
-console.log(arrayDiff([1, 2, 2], []));
-console.log(arrayDiff([], [1, 2]));
-console.log(arrayDiff([1, 2, 3], [1, 2]));
- */
+// console.log(arrayDiff([1, 2], [1]));
+// console.log(arrayDiff([1, 2, 2], [1]));
+// console.log(arrayDiff([1, 2, 2], [2]));
+// console.log(arrayDiff([1, 2, 2], []));
+// console.log(arrayDiff([], [1, 2]));
+// console.log(arrayDiff([1, 2, 3], [1, 2]));
+
 // ([1,2], [1]), [2], "a was [1,2], b was [1]");
 // ([1,2,2], [1]), [2,2], "a was [1,2,2], b was [1]");
 // ([1,2,2], [2]), [1], "a was [1,2,2], b was [2]");
@@ -261,28 +258,28 @@ console.log(arrayDiff([1, 2, 3], [1, 2]));
 //    942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
 // 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
 // 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
-/* 
-function digitalRoot(n) {
-   let xd = [...n.toString()];
-   let sumilla = 0;
 
-   while (xd.length > 1) {
-      sumilla = xd.reduce((t, i) => {
-         t = +t + +i;
-         return t;
-      });
+// function digitalRoot(n) {
+//    let xd = [...n.toString()];
+//    let sumilla = 0;
+   
+//    while (xd.length > 1) {
+//       sumilla = xd.reduce((t, i) => {
+//          t = +t + +i;
+//          return t;
+//       });
 
-      xd = [...sumilla.toString()];
-   }
+//       xd = [...sumilla.toString()];
+//    }
 
-   return sumilla;
-}
+//    return sumilla;
+// }
 
-console.log(digitalRoot(16));
-console.log(digitalRoot(942));
-console.log(digitalRoot(132189));
-console.log(digitalRoot(493193));
- */
+// console.log(digitalRoot(16));
+// console.log(digitalRoot(942));
+// console.log(digitalRoot(132189));
+// console.log(digitalRoot(493193));
+
 ///////////////////////////////////////////////////
 
 // 6 kyu   Find the odd int
@@ -296,23 +293,23 @@ console.log(digitalRoot(493193));
 // [1,1,2] should return 2, because it occurs 1 time (which is odd).
 // [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
 // [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
-/* 
-function findOdd(A) {
-   let diffe = [...new Set(A)];
 
-   for (const item of diffe) {
-      let many = A.filter(a => a === item).length;
+// function findOdd(A) {
+//    let diffe = [...new Set(A)];
 
-      if (many % 2 !== 0) return item;
-   }
-}
+//    for (const item of diffe) {
+//       let many = A.filter(a => a === item).length;
 
-console.log(findOdd([7]));
-console.log(findOdd([0]));
-console.log(findOdd([1, 1, 2]));
-console.log(findOdd([0, 1, 0, 1, 0]));
-console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
- */
+//       if (many % 2 !== 0) return item;
+//    }
+// }
+
+// console.log(findOdd([7]));
+// console.log(findOdd([0]));
+// console.log(findOdd([1, 1, 2]));
+// console.log(findOdd([0, 1, 0, 1, 0]));
+// console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
+
 /////////////////////////////////////////////
 
 // 6 kyu   Stop gninnipS My sdroW!
@@ -323,25 +320,25 @@ console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
 // spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw"
 // spinWords( "This is a test") => returns "This is a test"
 // spinWords( "This is another test" )=> returns "This is rehtona test"
-/* 
-function spinWords(string) {
-   let arr = string.split(' ');
 
-   let newArr = arr.map(el => {
-      if (el.length >= 5) {
-         return [...el].reverse().join('');
-      } else {
-         return el;
-      }
-   });
+// function spinWords(string) {
+//    let arr = string.split(' ');
 
-   return newArr.join(' ');
-}
+//    let newArr = arr.map(el => {
+//       if (el.length >= 5) {
+//          return [...el].reverse().join('');
+//       } else {
+//          return el;
+//       }
+//    });
 
-console.log(spinWords('Hey fellow warriors'));
-console.log(spinWords('This is a test'));
-console.log(spinWords('This is another test'));
- */
+//    return newArr.join(' ');
+// }
+
+// console.log(spinWords('Hey fellow warriors'));
+// console.log(spinWords('This is a test'));
+// console.log(spinWords('This is another test'));
+
 ////////////////////////////////////////////////////////
 
 // 6 kyu  Multiples of 3 or 5
@@ -351,17 +348,17 @@ console.log(spinWords('This is another test'));
 
 // Note: If the number is a multiple of both 3 and 5, only count it once.
 
-/* function solution(number) {
-   let arr = [];
+// function solution(number) {
+//    let arr = [];
 
-   for (let i = 1; i < number; i++) {
-      if (i % 3 === 0 || i % 5 === 0) {
-         arr.push(i);
-      }
-   }
+//    for (let i = 1; i < number; i++) {
+//       if (i % 3 === 0 || i % 5 === 0) {
+//          arr.push(i);
+//       }
+//    }
 
-   return arr.reduce((a, b) => a + b);
-}
+//    return arr.reduce((a, b) => a + b);
+// }
 
-console.log(solution(10));
- */
+// console.log(solution(10));
+

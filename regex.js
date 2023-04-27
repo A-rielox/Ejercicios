@@ -38,6 +38,10 @@ console.log(cap.join(' '));
 /////
 console.log(yoyo.replaceAll('o', '0').replaceAll('a', '@').replaceAll('i', 1));
 
+console.log(yoyo.includes('odoy'));
+console.log(yoyo.startsWith('ari'));
+console.log(yoyo.endsWith('Os'.toLowerCase()));
+
 /////
 const creditCard = '123456789';
 
