@@ -1,25 +1,14 @@
-// 6 kyu    Array.diff
-// Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+// prettier-ignore
+const letters = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',  'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' ];
 
-// It should remove all values from list a, which are present in list b keeping their order.
+const alphabetPosition = phrase => {
+   const single = phrase
+      .toUpperCase()
+      .split('')
+      .filter(c => c.toLowerCase() !== c.toUpperCase());
+   const singleIdx = single.map(c => letters.indexOf(c) + 1);
 
-// arrayDiff([1,2],[1]) == [2]
-// If a value is present in b, all of its occurrences must be removed from the other:
+   return singleIdx.join(' ');
+};
 
-// arrayDiff([1,2,2,2,3],[2]) == [1,3]
-
-function arrayDiff(a, b) {}
-
-console.log(arrayDiff([1, 2, 2], [1]));
-// console.log(arrayDiff([1, 2], [1]));
-// console.log(arrayDiff([1, 2, 2], [2]));
-// console.log(arrayDiff([1, 2, 2], []));
-// console.log(arrayDiff([], [1, 2]));
-// console.log(arrayDiff([1, 2, 3], [1, 2]));
-
-// ([1,2], [1]), [2], "a was [1,2], b was [1]");
-// ([1,2,2], [1]), [2,2], "a was [1,2,2], b was [1]");
-// ([1,2,2], [2]), [1], "a was [1,2,2], b was [2]");
-// ([1,2,2], []), [1,2,2], "a was [1,2,2], b was []");
-// ([], [1,2]), [], "a was [], b was [1,2]");
-// ([1,2,3], [1,2]), [3], "a was [1,2,3], b was [1,2]")
+console.log(alphabetPosition('hola hola que hace.'));

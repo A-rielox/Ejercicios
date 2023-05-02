@@ -87,7 +87,7 @@ const filtroPrime = item => {
 let justThePrimes = numsForPrime.filter(filtroPrime);
 
 console.log(justThePrimes);
-
+   
 ////////////////////
 const numsMax = nums.reduce((tot, curr) => {
    if (curr > tot) {

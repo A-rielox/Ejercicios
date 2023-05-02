@@ -1,4 +1,4 @@
-:root {
+/* :root {
    --color-green: #00a878;
    --color-red: #fe5e41;
    --color-button: #fdffff;
@@ -28,11 +28,14 @@
    content: '';
    border-radius: 50%;
    box-shadow: inset 0px 0px 0px 1px var(--color-black);
-   /* box-shadow: inset 0px 0px 0px 4px blue; */
 }
 .switch-button .switch-button__checkbox:checked + .switch-button__label {
    background-color: var(--color-green);
 }
 .switch-button .switch-button__checkbox:checked + .switch-button__label:before {
    transform: translateX(2rem);
+} */
+
+#container p {
+   color: red;
 }
