@@ -1,39 +1,24 @@
-// In this simple Kata your task is to create a function that turns a string into a Mexican Wave. You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up.
-// Rules
-//  1.  The input string will always be lower case but maybe empty.
+// Examples
+// "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+// "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+// ""  -->  ""
 
-//  2.  If the character in the string is whitespace then pass over it as if it was an empty seat
-// Example
-// wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+function order(words) {
+   const singleW = words.split(' ');
+   const orderedArr = [...singleW];
 
-function wave(str) {
-   const singleChar = [...str.toString()];
-   let final = [];
+   singleW.forEach(el => {
+      let idx = [...el]
+         .filter(c => c.toLowerCase() === c.toUpperCase())
+         .map(i => +i);
 
-   singleChar.forEach((el, idx) => {
-      let temp = [...str.toString()];
-
-      const isChar = el.toUpperCase() !== el.toLowerCase();
-
-      if (isChar) {
-         temp.splice(idx, 1, el.toUpperCase());
-         final.push(temp.join(''));
-      }
+      orderedArr.splice(idx - 1, 1, el);
    });
 
-   return final;
+   console.log(singleW);
+   console.log(orderedArr);
 }
 
-console.log(wave('two words'));
-
-console.log(wave('codewars'));
-// result = ["Codewars", "cOdewars", "coDewars", "codEwars", "codeWars", "codewArs", "codewaRs", "codewarS"];
-//
-// result = [];
-// wave("")
-//
-console.log(wave('two words'));
-// result = ["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"];
-//
-console.log(wave(' gap '));
-// result = [" Gap ", " gAp ", " gaP "];
+console.log(order('is2 Thi1s T4est 3a'));
+// console.log(order('4of Fo1r pe6ople g3ood th5e the2'));
+// console.log(order(""));
