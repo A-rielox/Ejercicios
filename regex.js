@@ -87,7 +87,7 @@ const filtroPrime = item => {
 let justThePrimes = numsForPrime.filter(filtroPrime);
 
 console.log(justThePrimes);
-   
+
 ////////////////////
 const numsMax = nums.reduce((tot, curr) => {
    if (curr > tot) {
@@ -120,6 +120,10 @@ let arrMayoresQ10 = [];
 for (let i = 0; i < forBiger.length; i++) {
    if (forBiger[i] > 10) arrMayoresQ10.push(forBiger[i]);
 }
+
+// forBiger.forEach(n => {
+//    n > 10 && arrMayoresQ10.push(n);
+// });
 
 console.log(arrMayoresQ10);
 
