@@ -18,6 +18,12 @@
 // console.log(hacerRomano(2000));
 /////////////////////////////////
 
+
+
+
+
+
+
 // 6 kyu   Does my number look big in this?
 // A Narcissistic Number (or Armstrong Number) is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base. In this Kata, we will restrict ourselves to decimal (base 10).
 
@@ -281,6 +287,10 @@
 // console.log(digitalRoot(493193));
 
 ///////////////////////////////////////////////////
+
+
+
+
 
 // 6 kyu   Find the odd int
 // Given an array of integers, find the one that appears an odd number of times.
