@@ -1,3 +1,20 @@
+// 6 kyu   Stop gninnipS My sdroW!
+// Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+
+// Examples:
+
+// spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw"
+// spinWords( "This is a test") => returns "This is a test"
+// spinWords( "This is another test" )=> returns "This is rehtona test"
+
+// function spinWords(string) {}
+
+// console.log(spinWords("Hey fellow warriors"));
+// console.log(spinWords("This is a test"));
+// console.log(spinWords("This is another test"));
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
 // 6 kyu   Find the odd int
 // Given an array of integers, find the one that appears an odd number of times.
 
@@ -10,15 +27,7 @@
 // [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
 // [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
 
-function findOdd(A) {
-   const singles = [...new Set(A)];
-      // let asdf = A.sp
-
-
-   console.log(singles    );
-   
-
-}
+// function findOdd(A) {}
 
 // console.log(findOdd([7]));
 // console.log(findOdd([0]));
@@ -26,15 +35,7 @@ function findOdd(A) {
 // console.log(findOdd([0, 1, 0, 1, 0]));
 // console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
 
-//
-//
-//
-//
-///////////////////////////////////////////
-//
-//
-//
-//
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 // 6 kyu    Sum of Digits / Digital Root
 // Digital root is the recursive sum of all the digits in a number.
@@ -47,24 +48,14 @@ function findOdd(A) {
 // 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
 // 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
 
-// function digitalRoot(n) {
-//
-// }
+// function digitalRoot(n) {}
 
 // console.log(digitalRoot(16));
 // console.log(digitalRoot(942));
 // console.log(digitalRoot(132189));
 // console.log(digitalRoot(493193));
 
-//
-//
-//
-//
-///////////////////////////////////////////
-//
-//
-//
-//
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 // 6 kyu    Array.diff
 // Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
@@ -85,15 +76,7 @@ function findOdd(A) {
 // console.log(arrayDiff([], [1, 2])); // []
 // console.log(arrayDiff([1, 2, 3], [1, 2])); //  [3]
 
-//
-//
-//
-//
-///////////////////////////////////////////
-//
-//
-//
-//
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 // 6 kyu    Find The Parity Outlier
 // You are given an array (which will have a length of at least 3, but could be very large) containing integers. The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. Write a method that takes the array as an argument and returns this "outlier" N.
@@ -113,15 +96,7 @@ function findOdd(A) {
 // console.log(findOutlier([0, 0, 3, 0, 0])); //, 3)
 // console.log(findOutlier([1, 1, 0, 1, 1])); //, 0)
 
-//
-//
-//
-//
-///////////////////////////////////////////
-//
-//
-//
-//
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 // 6 kyu   Counting Duplicates
 // Count the number of Duplicates
@@ -139,22 +114,14 @@ function findOdd(A) {
 // function duplicateCount(text) {}
 
 // console.log(duplicateCount('abcde'));
-// console.log(duplicateCount('aabbcde'));
-// console.log(duplicateCount('aabBcde'));
-// console.log(duplicateCount('indivisibility'));
-// console.log(duplicateCount('Indivisibilities'));
-// console.log(duplicateCount('aA11'));
-// console.log(duplicateCount('ABBA'));
+// console.log(duplicateCount("aabbcde"));
+// console.log(duplicateCount("aabBcde"));
+// console.log(duplicateCount("indivisibility"));
+// console.log(duplicateCount("Indivisibilities"));
+// console.log(duplicateCount("aA11"));
+// console.log(duplicateCount("ABBA"));
 
-//
-//
-//
-//
-///////////////////////////////////////////
-//
-//
-//
-//
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 // 6 kyu  Persistent Bugger.
 // Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
@@ -171,15 +138,7 @@ function findOdd(A) {
 // console.log(persistence(999));
 // console.log(persistence(4));
 
-//
-//
-//
-//
-///////////////////////////////////////////
-//
-//
-//
-//
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 // 6 kyu   Does my number look big in this?
 // A Narcissistic Number (or Armstrong Number) is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base. In this Kata, we will restrict ourselves to decimal (base 10).
@@ -205,67 +164,36 @@ function findOdd(A) {
 // console.log(narcissistic(1652));
 // console.log(narcissistic(371));
 
-//
-//
-//
-//
-///////////////////////////////////////////
-//
-//
-//
-//
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 // Examples
 // "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
 // "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 // ""  -->  ""
 
-// function order(words) {}
+function order(words) {
+   let singles = words;
+}
 
-// console.log(order('is2 Thi1s T4est 3a'));
+console.log(order("is2 Thi1s T4est 3a"));
 // console.log(order('4of Fo1r pe6ople g3ood th5e the2'));
 // console.log(order(""));
 
-//
-//
-//
-//
-///////////////////////////////////////////
-//
-//
-//
-//
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 // const alphabetPosition = text => {
-//    // prettier-ignore
 //    const letters = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',  'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' ];
 // };
 
 // console.log(alphabetPosition('hola hola que hace.'));
 
-//
-//
-//
-//
-///////////////////////////////////////////
-//
-//
-//
-//
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 // let forBiger = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1, 2, 3, 14, 15];
 
 // console.log(arrMayoresQ10);
 
-//
-//
-//
-//
-///////////////////////////////////////////
-//
-//
-//
-//
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 // primero mayor q 10
 // const nums = [3, 5, 7, 12, 42, 633, 13, 19, 235, 22, 999, 55, 11];
@@ -274,60 +202,28 @@ function findOdd(A) {
 // console.log(mayorQueDiez);
 // console.log(nums[mayorQueDiez]);
 
-//
-//
-//
-//
-///////////////////////////////////////////
-//
-//
-//
-//
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 // OBTENER EL MAX
 // const nums = [3, 5, 7, 12, 42, 633, 13, 19, 235, 22, 999, 55, 11];
 
 // console.log(numsMax);
 
-//
-//
-//
-//
-///////////////////////////////////////////
-//
-//
-//
-//
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 // FILTRAR PRIMOS
 // const numsForPrime = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 // console.log(justThePrimes);
 
-//
-//
-//
-//
-///////////////////////////////////////////
-//
-//
-//
-//
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 // FILTRAR MAYORES Q 12
 // const nums = [3, 5, 7, 12, 42, 633, 13, 19, 235, 22, 999, 55, 11];
 
 // console.log(mayores);
 
-//
-//
-//
-//
-///////////////////////////////////////////
-//
-//
-//
-//
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 // const creditCard = '123456789';
 
@@ -335,17 +231,8 @@ function findOdd(A) {
 
 // console.log(mask(creditCard));
 
-//
-//
-//
-//
-///////////////////////////////////////////
-//
-//
-//
-//
+/////////////////////////////////////////////////////////////////////////////////////////////
 
-// prettier-ignore
 // const romaObj = { M:1000, CM:900, D:500, CD:400, C:100, XC:90, L:50, XL:40, X:10, IX:9, V:5, IV:4, I:1 };
 
 // function toRom(num) {}

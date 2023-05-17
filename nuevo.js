@@ -16,13 +16,8 @@
 // console.log(hacerRomano(19));
 // console.log(hacerRomano(21));
 // console.log(hacerRomano(2000));
+
 /////////////////////////////////
-
-
-
-
-
-
 
 // 6 kyu   Does my number look big in this?
 // A Narcissistic Number (or Armstrong Number) is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base. In this Kata, we will restrict ourselves to decimal (base 10).
@@ -100,7 +95,6 @@
 // 999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2)
 // 4 --> 0 (because 4 is already a one-digit number)
 
-// prettier-ignore
 // function persistence(num) {
 //    let arrWithNum = num.toString().split('').map(el => +el);
 
@@ -136,7 +130,6 @@
 // Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" ( as a string )
 
 // function alphabetPosition(text) {
-//    // prettier-ignore
 //    const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
 //    let lett = [...text.toUpperCase()].filter(
@@ -268,7 +261,7 @@
 // function digitalRoot(n) {
 //    let xd = [...n.toString()];
 //    let sumilla = 0;
-   
+
 //    while (xd.length > 1) {
 //       sumilla = xd.reduce((t, i) => {
 //          t = +t + +i;
@@ -287,10 +280,6 @@
 // console.log(digitalRoot(493193));
 
 ///////////////////////////////////////////////////
-
-
-
-
 
 // 6 kyu   Find the odd int
 // Given an array of integers, find the one that appears an odd number of times.
@@ -371,4 +360,3 @@
 // }
 
 // console.log(solution(10));
-
